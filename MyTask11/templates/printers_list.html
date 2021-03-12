@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1>Printers_list</h1>
+<ul>
+    {% for printer in printers %}
+    <li><a href="/issueslist/{{ printer.id }}">{{ printer.printer_name }}</a>
+        <br><ul><li><b>Name</b> &nbsp;&nbsp; :{{printer.printer_name}}</li>
+            <li><b>Serial</b> &nbsp;&nbsp;:{{printer.printer_serial}}</li>
+            <li><b>Model</b>  &nbsp;&nbsp;:{{printer.printer_model}}</li>
+            <li><b>Make</b>  &nbsp;&nbsp;:{{printer.printer_make}}</li>
+        </ul>
+    </li>
+
+    <br>
+    {% endfor %}
+</ul>
+</body>
+</html>

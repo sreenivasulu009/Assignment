@@ -1,0 +1,21 @@
+<html>
+
+<body>
+<script>
+    function getValue(option) {
+      document.getElementById("solution").href="/solutions/" +  option.value + "/";
+      return false;
+    };
+</script>
+<label>Choose an issue:</label>
+<select name="issues" id="issues_id"  onchange="getValue(this);">
+    <option value="">Select Issue</option>
+
+    {% for each in issues %}
+     <option value="{{ each.id }}">{{each.issue_no}}-{{each.issue_name}}</option>
+    {% endfor %}
+
+</select>
+<a href="/solutions/{{ each.issue_id }}" id="solution">Find Solution</a>
+</body>
+</html>
